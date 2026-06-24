@@ -13,7 +13,7 @@
         button { background: linear-gradient(90deg, #3b82f6, #8b5cf6); color: white; border: none; padding: 14px 28px; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: bold; margin: 10px; width: 100%; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3); }
         button:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5); }
         .lang-btn { width: auto; display: inline-block; min-width: 150px; }
-        .hidden { display: none; }
+        .hidden { display: none !important; }
         .option-btn { background: rgba(255, 255, 255, 0.05); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.1); margin: 12px 0; text-align: left; padding: 15px 20px; }
         .option-btn:hover { background: rgba(255, 255, 255, 0.15); border-color: #38bdf8; }
         #timer-box { font-size: 18px; color: #f43f5e; font-weight: bold; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -65,8 +65,8 @@
         uz: [
             { q: "1. Daraxtda 5 ta qush o'tirgandi. Ovchi bittasini otdi. Daraxtda nechta qush qoldi?", o: ["4 ta", "1 ta", "Hech qancha (qolganlari uchib ketdi)", "5 ta"], a: 2 },
             { q: "2. Marafonda 2-o'rindagi yuguruvchini quvib o'tsangiz, nechanchi bo'lasiz?", o: ["1-o'rin", "2-o'rin", "3-o'rin", "Oxirgi"], a: 1 },
-            { q: "3. Dekabr, Yanvar va Fevral oylarida necha kun bor?", o: ["90 kun", "89 kun", "Hamma oyda 28 kun bor", "91 (yoki kabisa yilida 92) kun"], a: 3 },
-            { q: "4. Agar kecha ertaga bo'lganida edi, bugun payshanba bo'lardi. Bugun qaysi kun?", o: ["Seshanba", "Chorshanba", "Juma", "Shanba"], a: 3 },
+            { q: "3. Dekabr, Yanvar va Fevral oylarida jami necha kun bor?", o: ["90 kun", "89 kun", "Hamma oyda 28 kun bor", "91 (yoki kabisa yilida 92) kun"], a: 3 },
+            { q: "4. Agar kecha ertaga bo'lganida edi, bugun payshanba bo'lardi. Bugun qaysi kun?", o: ["Seshanba", "Chorshanba", "Juma", "Shanba"], a: 2 },
             { q: "5. Otaning 5 ta o'g'li bor. Har bir o'g'ilning bittadan opasi bor. Otaning jami nechta farzandi bor?", o: ["10 ta", "6 ta", "5 ta", "9 ta"], a: 1 },
             { q: "6. Qaysi so'z qavs ichidagi so'z mantiqiga mos keladi: Tikuvchi (Igna) Haydovchi (?)", o: ["Mashina", "Rul", "Benzin", "Yo'l"], a: 1 },
             { q: "7. Ketma-ketlikni davom ettiring: 2, 4, 8, 16, 32, ?", o: ["40", "64", "48", "50"], a: 1 },
@@ -75,7 +75,7 @@
             { q: "10. Shaharning bir chetidan ikkinchi chetiga qarab poezd ketmoqda. Shamol sharqdan g'arbga esyapti. Elektrovozning tutuni qaysi tomonga qarab ketadi?", o: ["G'arbga", "Sharqqa", "Tepaga", "Elektrovozning tutuni bo'lmaydi"], a: 3 },
             { q: "11. 1 dan 100 gacha bo'lgan sonlar ichida nechta '9' raqami qatnashgan?", o: ["10 ta", "19 ta", "20 ta", "11 ta"], a: 2 },
             { q: "12. Aka singlisidan 4 yosh katta. 5 yildan keyin aka singlisidan necha yosh katta bo'ladi?", o: ["9 yosh", "4 yosh", "5 yosh", "O'zgaradi"], a: 1 },
-            { q: "13. Quyidagilardan qaysi biri ortiqcha: Olma, Nok, Pomidor, Banan, Shaftoli?", o: ["Banan", "Pomidor", "Nok", "Ortiqchasi yo'q, hammasi meva"], a: 3 },
+            { q: "13. Quyidagilardan qaysi biri ortiqcha: Olma, Nok, Pomidor, Banan, Shaftoli?", o: ["Banan", "Pomidor", "Nok", "Ortiqchasi yo'q, hammasi meva"], a: 1 },
             { q: "14. Stol ustida 3 ta olma bor edi. Siz 2 tasini oldingiz. Sizda nechta olma qoldi?", o: ["1 ta", "2 ta", "3 ta", "0 ta"], a: 1 },
             { q: "15. Agar 5ta mashina 5 daqiqada 5ta detal yaratsa, 100ta mashina 100ta detalni necha daqiqada yaratadi?", o: ["100 daqiqa", "20 daqiqa", "5 daqiqa", "50 daqiqa"], a: 2 },
             { q: "16. Bo'sh qopga nechta kartoshka solish mumkin?", o: ["Qop to'lguncha", "Faqat 1 ta (keyin qop bo'sh bo'lmaydi)", "Hech qancha", "Qop hajmiga qarab"], a: 1 },
@@ -88,7 +88,7 @@
             { q: "1. На дереве сидели 5 птиц. Охотник подстрелил одну. Сколько птиц осталось?", o: ["4", "1", "Ни одной (остальные улетели)", "5"], a: 2 },
             { q: "2. Вы обогнали бегуна, идущего вторым. Какую позицию вы теперь занимаете?", o: ["Первую", "Вторую", "Третью", "Последнюю"], a: 1 },
             { q: "3. Сколько дней в Декабре, Январе и Феврале суммарно?", o: ["90 дней", "89 дней", "Во всех месяцах по 28 дней", "91 (или 92 в високосный)"], a: 3 },
-            { q: "4. Если бы вчерашний день был завтрашним, то сегодня был бы четверг. Какой сегодня день?", o: ["Вторник", "Среда", "Пятница", "Суббота"], a: 3 },
+            { q: "4. Если бы вчерашний день был завтрашним, то сегодня был бы четверг. Какой сегодня день?", o: ["Вторник", "Среда", "Пятница", "Суббота"], a: 2 },
             { q: "5. У отца 5 сыновей. У каждого сына есть одна сестра. Сколько всего детей у отца?", o: ["10", "6", "5", "9"], a: 1 },
             { q: "6. Какое слово подходит по логике: Портной (Игла) Водитель (?)", o: ["Машина", "Руль", "Бензин", "Дорога"], a: 1 },
             { q: "7. Продолжите ряд: 2, 4, 8, 16, 32, ?", o: ["40", "64", "48", "50"], a: 1 },
@@ -97,6 +97,6 @@
             { q: "10. Поезд едет с востока на запад. Ветер дует с востока на запад. В какую сторону идет дым из электровоза?", o: ["На запад", "На восток", "Вверх", "У электровоза нет дыма"], a: 3 },
             { q: "11. Сколько раз цифра '9' встречается в числах от 1 до 100?", o: ["10", "19", "20", "11"], a: 2 },
             { q: "12. Брат старше сестры на 4 года. На сколько лет он будет старше её через 5 лет?", o: ["На 9 лет", "На 4 года", "На 5 лет", "Изменится"], a: 1 },
-            { q: "13. Что здесь лишнее: Яблоко, Груша, Помидор, Банан, Персик?", o: ["Банан", "Помидор", "Груша", "Лишнего нет, все фрукты"], a: 3 },
+            { q: "13. Что здесь лишнее: Яблоко, Груша, Помидор, Банан, Персик?", o: ["Банан", "Помидор", "Груша", "Лишнего нет, все фрукты"], a: 1 },
             { q: "14. На столе лежало 3 яблока. Вы взяли 2. Сколько у вас осталось?", o: ["1", "2", "3", "0"], a: 1 },
             { q: "15. Если 5 машин за 5 минут создают 5 деталей, за сколько минут 100 машин создадут 100 деталей?", o: ["100 минут", "20 минут", "5 минут", "50 минут"], a: 2 },
